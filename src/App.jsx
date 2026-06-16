@@ -144,7 +144,7 @@ function App() {
       gaid: "Гайд по Math и случайным числам",
       info: "Math.random() возвращает случайное число от 0 (включительно) до 1 (не включая). С его помощью можно делать случайные выборы, игры, тесты. Также очень полезны Math.floor(), Math.ceil(), Math.round() для округления. Условия (if, else) помогают принимать решения в коде в зависимости от значения.",
       code: "const random = Math.random(); // 0.0 - 0.999...\n\nconst randomNumber = Math.floor(Math.random() * 100) + 1; // случайное от 1 до 100\n\nconst num = 7;\n\nif (num > 10) {\n  console.log('Большое число');\n} else if (num > 5) {\n  console.log('Среднее число');\n} else {\n  console.log('Маленькое число');\n}\n\n// Пример в React:\nfunction RandomDice() {\n  const [roll, setRoll] = useState(1);\n  return (\n    <>\n      <p>Выпало: {roll}</p>\n      <button onClick={() => setRoll(Math.floor(Math.random() * 6) + 1)}>\n        Бросить кубик\n      </button>\n    </>\n  );\n}",
-      image: "https://media.licdn.com/dms/image/v2/D4D12AQGZOlvNckIdXw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1671861031037?e=2147483647&v=beta&t=n6ieyEkMRRIHhNtGVc7PfWUPeOMDYvt-NQp7BsJfl-Q"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTELS26SUNkWQna9e5kpYNYnQz9k39LuCw-oA&s"
     }
   ];
 
