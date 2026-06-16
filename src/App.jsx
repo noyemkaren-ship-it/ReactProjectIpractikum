@@ -35,6 +35,30 @@ function App() {
       image: "https://elbrusboot.camp/blog/content/images/2024/03/-----------------------------JavaScript.png"
     },
     {
+      title: "Как работать с структурой папок, что такое public и src папки?",
+      description: "Понимание структуры проекта",
+      gaid: "Гайд по структуре папок в React",
+      info: "Когда ты создаёшь проект, у тебя появляется папка `src` — это как мастерская, где ты будешь создавать свои компоненты и писать код. Внутри `src` обычно есть `index.js` — это входная точка, откуда начинается всё приложение. Папка `public` — это как витрина магазина, куда ты можешь положить статические файлы (картинки, шрифты), которые будут доступны по прямой ссылке.",
+      code: "my-app/\n  public/\n    index.html\n    logo.png\n  src/\n    App.jsx\n    index.js",
+      image: "https://habrastorage.org/getpro/habr/upload_files/f0f/e59/74b/f0fe5974ba509d6ce60c3f70b11f9ed4.png",
+    },
+    {
+      title: "Как работает импорт и экспорт в React?",
+      description: "Как делиться кодом между файлами",
+      gaid: "Гайд по импорту и экспорту",
+      info: "Импорт и экспорт — это как обмен вещами между друзьями. Если ты создал компонент в одном файле и хочешь использовать его в другом, ты должен его экспортировать (сделать доступным) и импортировать (забрать). Есть два вида экспорта: по умолчанию (default) и именованный (named).",
+      code: "// В Button.jsx\nexport default function Button() {\n  return <button>Нажми меня</button>;\n}\n\n// В App.jsx\nimport Button from './Button';\n\nfunction App() {\n  return <Button />;\n}\n\nexport default App;",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUeAbaJaJQi2Tee9oT003vo8u0j7IRN97KA&s",
+    },
+    {
+      title: "Как выводить изображения из папки public в React?",
+      description: "Как показывать картинки в React",
+      gaid: "Гайд по выводу изображений в React",
+      info: "Чтобы вывести изображение из папки `public`, нужно просто указать путь к файлу в атрибуте `src` тега `<img>`. Например, если у тебя есть файл `logo.png` в папке `public`, ты можешь использовать его так: `<img src=\"/logo.png\" alt=\"Логотип\" />`.",
+      code: "<img src=\"/logo.png\" alt=\"Логотип\" />",
+      image: "https://itproger.com/img/news/cartoon_design_1.jpg"
+    },
+    {
       title: "Что такое массивы в JavaScript?",
       description: "Простое объяснение массивов",
       gaid: "Гайд по массивам для новичков",
@@ -96,7 +120,7 @@ function App() {
       gaid: "Гайд по props",
       info: "Props (properties) — это как посылка, которую ты передаёшь от родительского компонента к дочернему. С помощью props ты можешь передавать текст, числа, массивы, функции и даже другие компоненты.",
       code: "function Welcome({ name, age }) {\n  return <h1>Привет, {name}! Тебе {age} лет.</h1>;\n}\n\nfunction App() {\n  return <Welcome name=\"Алексей\" age={25} />;\n}",
-      image: "https://elbrusboot.camp/blog/content/images/2024/03/-----------------------------JavaScript.png"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-KMlzIaER-ithH4ChuiRiGqC8GK1L9hpYw&s"
     },
     {
       title: "Что такое состояние (useState)?",
@@ -104,7 +128,7 @@ function App() {
       gaid: "Простое объяснение useState",
       info: "Состояние — это данные, которые могут меняться. Например: счётчик, открыто/закрыто меню, текст в поле ввода. Когда состояние меняется, React автоматически обновляет интерфейс. `useState` — самый простой хук для работы с состоянием.",
       code: "import { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <>\n      <p>Счётчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>+1</button>\n    </>\n  );\n}",
-      image: "https://i.ytimg.com/vi/DCoscmiugOE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0BVaHvn9FtkKxuEAeNCxhvOpAjQ"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-KMlzIaER-ithH4ChuiRiGqC8GK1L9hpYw&s"
     },
     {
       title: "Небольшой гайд по терминалу Linux для новичков а точнее команды: cd, ls, mkdir, touch, rm",
@@ -113,7 +137,7 @@ function App() {
       info: "Терминал — это как командная строка, где ты можешь управлять компьютером с помощью текста. Команды: `cd` — сменить папку, `ls` — показать содержимое папки, `mkdir` — создать папку, `touch` — создать файл, `rm` — удалить файл или папку.",
       code: "cd my-project\nls\nmkdir src\ncd src\ntouch App.jsx\nrm App.jsx",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8eXAqe6w8WvrRb-ZOuTofxraN8Z1AXJiUdA&s"
-    }
+    },
   ];
 
   return (
