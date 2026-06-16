@@ -138,24 +138,95 @@ function App() {
       code: "cd my-project\nls\nmkdir src\ncd src\ntouch App.jsx\nrm App.jsx",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8eXAqe6w8WvrRb-ZOuTofxraN8Z1AXJiUdA&s"
     },
+    {
+      title: "Как работать с Math и случайными числами в JavaScript?",
+      description: "Math.random(), округление и условия",
+      gaid: "Гайд по Math и случайным числам",
+      info: "Math.random() возвращает случайное число от 0 (включительно) до 1 (не включая). С его помощью можно делать случайные выборы, игры, тесты. Также очень полезны Math.floor(), Math.ceil(), Math.round() для округления. Условия (if, else) помогают принимать решения в коде в зависимости от значения.",
+      code: "const random = Math.random(); // 0.0 - 0.999...\n\nconst randomNumber = Math.floor(Math.random() * 100) + 1; // случайное от 1 до 100\n\nconst num = 7;\n\nif (num > 10) {\n  console.log('Большое число');\n} else if (num > 5) {\n  console.log('Среднее число');\n} else {\n  console.log('Маленькое число');\n}\n\n// Пример в React:\nfunction RandomDice() {\n  const [roll, setRoll] = useState(1);\n  return (\n    <>\n      <p>Выпало: {roll}</p>\n      <button onClick={() => setRoll(Math.floor(Math.random() * 6) + 1)}>\n        Бросить кубик\n      </button>\n    </>\n  );\n}",
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQGZOlvNckIdXw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1671861031037?e=2147483647&v=beta&t=n6ieyEkMRRIHhNtGVc7PfWUPeOMDYvt-NQp7BsJfl-Q"
+    }
   ];
 
-  return (
-    <>
-      <div className="App">
-        {information.map((item, index) => (
-          <div key={index}>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-            <h3>{item.gaid}</h3>
-            <p>{item.info}</p>
-            <p className="code">{item.code}</p>
-            <img src={item.image} alt={item.title} />
+  const pet_idea = [
+      {
+        title: "Простая энциклопедия про море",
+        description: "Создай красивую одностраничную энциклопедию о море. Используй только HTML + CSS + немного JavaScript (можно с React). Добавь карточки с животными, фактами, красивые картинки и навигацию."
+      },
+      {
+        title: "Казино с обновлением баланса",
+        description: "Простое казино на удачу. При каждой перезагрузке страницы или нажатии кнопки «Крутить» баланс меняется с помощью Math.random(). Добавь разные ставки, выигрыши и красивый дизайн."
+      },
+      {
+        title: "Todo List (Список дел)",
+        description: "Классический проект. Добавляй, удаляй, отмечай выполненные задачи. Можно добавить сохранение в localStorage, чтобы задачи не пропадали при перезагрузке."
+      },
+      {
+        title: "Счётчик с историей",
+        description: "Простой, но красивый счётчик. Добавь кнопки +1, -1, Reset и историю изменений (когда и на сколько изменилось)."
+      },
+      {
+        title: "Викторина (Quiz)",
+        description: "Тест с несколькими вопросами. Показывай результат в конце, счётчик правильных ответов и возможность пройти заново."
+      },
+      {
+        title: "Портфолио разработчика",
+        description: "Сделай личный сайт-портфолио. Разделы: Обо мне, Навыки, Проекты, Контакты. Красивый дизайн — обязательно!"
+      },
+      {
+        title: "Погодное приложение",
+        description: "Приложение, которое показывает погоду (можно использовать бесплатный API, например OpenWeather). Поиск по городу + иконки погоды."
+      },
+      {
+        title: "Список фильмов",
+        description: "Каталог фильмов. Можно добавить поиск, фильтры по жанру, карточки с постерами и рейтингом (данные можно захардкодить)."
+      },
+      {
+        title: "Калькулятор чаевых",
+        description: "Очень полезный небольшой проект. Вводишь сумму счёта, выбираешь процент чаевых, количество людей — получаешь результат."
+      },
+      {
+        title: "Генератор мемов",
+        description: "Выбираешь шаблон мема, вводишь верхний и нижний текст — получаешь готовый мем. Можно добавить скачивание."
+      },
+      {
+        title: "Таймер Помодоро",
+        description: "Классический таймер 25 минут работа + 5 минут отдых. С звуковым уведомлением и красивым дизайном."
+      },
+      {
+        title: "Интерактивная карта желаний",
+        description: "Доска, куда можно добавлять свои цели с картинками и описанием (как vision board)."
+      }
+    ];
+
+
+    return (
+        <>
+          <h1>Спидран по React</h1>
+          <div className="App">
+            {information.map((item, index) => (
+              <div key={index}>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                <h3>{item.gaid}</h3>
+                <p>{item.info}</p>
+                <p className="code">{item.code}</p>
+                <img src={item.image} alt={item.title} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </>
-  );
+
+          <h1>Надеюсь, тебе понравился сайт! А вот идеи для пет-проектов (от простых к сложнее):</h1>
+          <div className="App">
+            {pet_idea.map((idea, index) => (
+              <div key={index}>
+                <h2>{idea.title}</h2>
+                <p>{idea.description}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      );
 }
 
 export default App;
