@@ -105,6 +105,14 @@ function App() {
       info: "Состояние — это данные, которые могут меняться. Например: счётчик, открыто/закрыто меню, текст в поле ввода. Когда состояние меняется, React автоматически обновляет интерфейс. `useState` — самый простой хук для работы с состоянием.",
       code: "import { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <>\n      <p>Счётчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>+1</button>\n    </>\n  );\n}",
       image: "https://i.ytimg.com/vi/DCoscmiugOE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0BVaHvn9FtkKxuEAeNCxhvOpAjQ"
+    },
+    {
+      title: "Небольшой гайд по терминалу Linux для новичков а точнее команды: cd, ls, mkdir, touch, rm",
+      description: "Основные команды для работы с терминалом",
+      gaid: "Гайд по терминалу Linux",
+      info: "Терминал — это как командная строка, где ты можешь управлять компьютером с помощью текста. Команды: `cd` — сменить папку, `ls` — показать содержимое папки, `mkdir` — создать папку, `touch` — создать файл, `rm` — удалить файл или папку.",
+      code: "cd my-project\nls\nmkdir src\ncd src\ntouch App.jsx\nrm App.jsx",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8eXAqe6w8WvrRb-ZOuTofxraN8Z1AXJiUdA&s"
     }
   ];
 
