@@ -24,7 +24,7 @@ function App() {
       gaid: "Гайд по JSX",
       info: "JSX — это смесь JavaScript и HTML. Благодаря ему ты можешь писать разметку прямо внутри JavaScript-файла. React потом превращает этот код в настоящий HTML. Главное правило: возвращать можно только один родительский элемент (или использовать <> </> — пустой фрагмент).",
       code: "function App() {\n  return (\n    <>\n      <h1>Заголовок</h1>\n      <p>Это параграф</p>\n    </>\n  );\n}",
-      image: "https://elbrusboot.camp/blog/content/images/2024/03/-----------------------------JavaScript.png"
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQGZOlvNckIdXw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1671861031037?e=2147483647&v=beta&t=n6ieyEkMRRIHhNtGVc7PfWUPeOMDYvt-NQp7BsJfl-Q"
     },
     {
       title: "Как показывать переменные на странице в React?",
